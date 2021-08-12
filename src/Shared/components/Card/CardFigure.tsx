@@ -7,7 +7,12 @@ export interface ICardFigureProps {
     alt?: string;
 }
 
-const classNames = {
+export interface ICardFigureClassNames {
+    container: string;
+    image: string;
+}
+
+const classNames: ICardFigureClassNames = {
     container: 'mc-card__visual',
     image: 'mc-card__img'
 };
