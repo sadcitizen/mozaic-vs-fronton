@@ -1,8 +1,8 @@
 import React from 'react';
 import { Story } from '@storybook/react';
-import { default as CardComponent } from '../components/Card';
+import { default as MozaicCardComponent } from '../components/Card';
 
-const Template: Story = () => <CardComponent />;
+const Template: Story = () => <MozaicCardComponent />;
 
 export const Card = Template.bind({});
 

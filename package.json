@@ -37,7 +37,7 @@
     "prettier:write": "prettier --write 'src/**/*.{js, ts, tsx, css}'",
     "test:coverage": "react-scripts test --env=jest-environment-jsdom-sixteen --coverage --watchAll=false",
     "test:watch": "react-scripts test --env=jest-environment-jsdom-sixteen",
-    "storybook": "start-storybook -p 6006 -s public",
+    "storybook": "start-storybook -p 6007 -s public",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
