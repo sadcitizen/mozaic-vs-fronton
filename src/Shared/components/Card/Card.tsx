@@ -1,9 +1,21 @@
 import React from 'react';
-import CardFigure from './CardFigure';
+import CardFigure, { ICardFigureClassNames } from './CardFigure';
+import CardFooter, { ICardFooterClassNames } from './CardFooter';
+
+const cardFigureClassNames: ICardFigureClassNames = {
+    container: 'mc-card__visual',
+    image: 'mc-card__img'
+};
+
+const cardFooterClassNames: ICardFooterClassNames = {
+    container: "mc-card__footer"
+};
+
 
 const Card = (): JSX.Element => (
     <div className="mc-card">
         <CardFigure
+            classNames={cardFigureClassNames}
             src="https://images.unsplash.com/photo-1534889156217-d643df14f14a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=640"
             alt="Card"
         />
@@ -16,11 +28,11 @@ const Card = (): JSX.Element => (
                     et dolore magna aliqua.
                 </p>
             </div>
-            <footer className="mc-card__footer">
+            <CardFooter classNames={cardFooterClassNames}>
                 <a href="/" className="mc-link mc-link--m">
                     Default link
                 </a>
-            </footer>
+            </CardFooter>
         </article>
     </div>
 );
