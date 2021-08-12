@@ -2,6 +2,7 @@ import React from 'react';
 import CardFigure, { ICardFigureClassNames } from './CardFigure';
 import CardFooter, { ICardFooterClassNames } from './CardFooter';
 import CardTitle, { ICardTitleClassNames } from './CardTitle';
+import CardSubtitle, { ICardSubtitleClassNames } from './CardSubtitle';
 
 const cardFigureClassNames: ICardFigureClassNames = {
     container: 'mc-card__visual',
@@ -16,6 +17,10 @@ const cardTitleClassNames: ICardTitleClassNames = {
     title: 'mc-card__title'
 };
 
+const cardSubtitleClassNames: ICardSubtitleClassNames = {
+    subtitle: 'mc-card__subtitle'
+};
+
 const Card = (): JSX.Element => (
     <div className="mc-card">
         <CardFigure
@@ -25,7 +30,7 @@ const Card = (): JSX.Element => (
         />
         <article className="mc-card__content">
             <CardTitle classNames={cardTitleClassNames}>Card title</CardTitle>
-            <h2 className="mc-card__subtitle">There can be a subtitle here.</h2>
+            <CardSubtitle classNames={cardSubtitleClassNames}>There can be a subtitle here.</CardSubtitle>
             <div className="mc-card__body">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
