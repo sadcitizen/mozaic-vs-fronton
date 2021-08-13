@@ -1,12 +1,6 @@
-import React, { FC } from 'react';
 import CardBody, { ICardBodyClassNames, ICardBodyProps } from '../CardBody';
+import withClassNames from '../../../hocs/withClassNames';
 
-interface IMozaicCardBodyProps extends Omit<ICardBodyProps, 'classNames'> {}
-
-const classNames: ICardBodyClassNames = {
+export default withClassNames<ICardBodyProps, ICardBodyClassNames>(CardBody, {
     container: 'mc-card__body'
-};
-
-const MozaicCardBody: FC<IMozaicCardBodyProps> = props => <CardBody classNames={classNames} {...props} />;
-
-export default MozaicCardBody;
+});

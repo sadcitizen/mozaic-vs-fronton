@@ -1,4 +1,5 @@
 import React from 'react';
+import { IClassNames } from '../../domain/ClassNames';
 
 export interface ICardFigureClassNames {
     container: string;
@@ -6,12 +7,13 @@ export interface ICardFigureClassNames {
 }
 
 export interface ICardFigureProps {
-    classNames: ICardFigureClassNames;
     src: string;
     alt?: string;
 }
 
-const CardFigure = ({ classNames, src, alt }: ICardFigureProps): JSX.Element => (
+interface IProps extends ICardFigureProps, IClassNames<ICardFigureClassNames> {}
+
+const CardFigure = ({ classNames, src, alt }: IProps): JSX.Element => (
     <figure className={classNames.container}>
         <img className={classNames.image} src={src} alt={alt} />
     </figure>

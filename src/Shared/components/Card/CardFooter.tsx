@@ -1,14 +1,15 @@
 import React, { FC } from 'react';
+import { IClassNames } from '../../domain/ClassNames';
 
 export interface ICardFooterClassNames {
     container: string;
 }
 
-export interface ICardFooterProps {
-    classNames: ICardFooterClassNames;
-}
+export interface ICardFooterProps {}
 
-const CardFooter: FC<ICardFooterProps> = ({ classNames, children }) => (
+interface IProps extends ICardFooterProps, IClassNames<ICardFooterClassNames> {}
+
+const CardFooter: FC<IProps> = ({ classNames, children }) => (
     <footer className={classNames.container}>
         { children }
     </footer>

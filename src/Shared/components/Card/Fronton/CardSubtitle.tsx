@@ -2,12 +2,10 @@ import React, { FC } from 'react';
 import CardSubtitle, { ICardSubtitleClassNames, ICardSubtitleProps } from '../CardSubtitle';
 import styles from './CardSubtitle.module.css';
 
-interface IFrontonCardTitleProps extends Omit<ICardSubtitleProps, 'classNames'> {}
-
 const classNames: ICardSubtitleClassNames = {
     subtitle: styles.subtitle
 };
 
-const FrontonCardSubtitle: FC<IFrontonCardTitleProps> = props => <CardSubtitle classNames={classNames} {...props} />;
+const FrontonCardSubtitle: FC<ICardSubtitleProps> = props => <CardSubtitle classNames={classNames} {...props} />;
 
 export default FrontonCardSubtitle;
