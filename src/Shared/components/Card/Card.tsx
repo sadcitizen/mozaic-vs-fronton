@@ -1,15 +1,10 @@
 import React from 'react';
-import CardContainer, { ICardContainerClassNames } from './CardContainer';
 import CardFigure, { ICardFigureClassNames } from './CardFigure';
 import CardFooter, { ICardFooterClassNames } from './CardFooter';
 import CardTitle, { ICardTitleClassNames } from './CardTitle';
 import CardSubtitle, { ICardSubtitleClassNames } from './CardSubtitle';
 import CardBody, { ICardBodyClassNames } from './CardBody';
 import CardContent, { ICardContentClassNames } from './CardContent';
-
-const cardContainerClassNames: ICardContainerClassNames = {
-    container: 'mc-card',
-};
 
 const cardFigureClassNames: ICardFigureClassNames = {
     container: 'mc-card__visual',
@@ -37,7 +32,7 @@ const cardBodyClassNames: ICardBodyClassNames = {
 };
 
 const Card = (): JSX.Element => (
-    <CardContainer classNames={cardContainerClassNames}>
+    <>
         <CardFigure
             classNames={cardFigureClassNames}
             src="https://images.unsplash.com/photo-1534889156217-d643df14f14a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=640"
@@ -56,7 +51,7 @@ const Card = (): JSX.Element => (
                 <a href="/">Default link</a>
             </CardFooter>
         </CardContent>
-    </CardContainer>
+    </>
 );
 
 export default Card;
