@@ -1,12 +1,12 @@
 import React from 'react';
 import { Story } from '@storybook/react';
-import { default as MozaicCardComponent } from '../components/Card';
-import MozaicCardContainer from '../components/Card/MozaicCardContainer';
+import { default as CardComponent } from '../components/Card';
+import CardContainer from '../components/Card/Mozaic/CardContainer';
 
 const Template: Story = () => (
-    <MozaicCardContainer>
-        <MozaicCardComponent />
-    </MozaicCardContainer>
+    <CardContainer>
+        <CardComponent />
+    </CardContainer>
 );
 
 export const Card = Template.bind({});

@@ -1,11 +1,10 @@
 import React, { FC } from 'react';
-import CardContainer, { ICardContainerClassNames, ICardContainerProps } from './CardContainer';
-import styles from './FrontonCardContainer.module.css';
+import CardContainer, { ICardContainerClassNames, ICardContainerProps } from '../CardContainer';
 
 interface IMozaicCardContainerProps extends Omit<ICardContainerProps, 'classNames'> {}
 
 const classNames: ICardContainerClassNames = {
-    container: styles.container,
+    container: 'mc-card',
 };
 
 const MozaicCardContainer: FC<IMozaicCardContainerProps> = props => <CardContainer classNames={classNames} {...props} />;
