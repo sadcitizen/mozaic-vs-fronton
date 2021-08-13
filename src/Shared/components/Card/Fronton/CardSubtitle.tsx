@@ -8,6 +8,6 @@ const classNames: ICardSubtitleClassNames = {
     subtitle: styles.subtitle
 };
 
-const MozaicCardSubtitle: FC<IFrontonCardTitleProps> = props => <CardSubtitle classNames={classNames} {...props} />;
+const FrontonCardSubtitle: FC<IFrontonCardTitleProps> = props => <CardSubtitle classNames={classNames} {...props} />;
 
-export default MozaicCardSubtitle;
+export default FrontonCardSubtitle;
