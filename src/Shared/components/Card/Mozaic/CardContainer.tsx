@@ -1,10 +1,6 @@
-import React, { FC } from 'react';
 import CardContainer, { ICardContainerClassNames, ICardContainerProps } from '../CardContainer';
+import withClassNames from '../../../hocs/withClassNames';
 
-const classNames: ICardContainerClassNames = {
-    container: 'mc-card',
-};
-
-const MozaicCardContainer: FC<ICardContainerProps> = props => <CardContainer classNames={classNames} {...props} />;
-
-export default MozaicCardContainer;
+export default withClassNames<ICardContainerProps, ICardContainerClassNames>(CardContainer, {
+    container: 'mc-card'
+});
