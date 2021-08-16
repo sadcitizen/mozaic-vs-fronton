@@ -1,11 +1,7 @@
-import React, { FC } from 'react';
 import CardTitle, { ICardTitleClassNames, ICardTitleProps } from '../CardTitle';
+import withClassNames from '../../../hocs/withClassNames';
 import styles from './CardTitle.module.css';
 
-const classNames: ICardTitleClassNames = {
+export default withClassNames<ICardTitleProps, ICardTitleClassNames>(CardTitle, {
     title: styles.title
-};
-
-const FrontonCardTitle: FC<ICardTitleProps> = props => <CardTitle classNames={classNames} {...props} />;
-
-export default FrontonCardTitle;
+});

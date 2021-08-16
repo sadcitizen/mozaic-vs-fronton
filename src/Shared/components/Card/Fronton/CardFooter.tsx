@@ -1,11 +1,7 @@
-import React, { FC } from 'react';
 import CardFooter, { ICardFooterClassNames, ICardFooterProps } from '../CardFooter';
+import withClassNames from '../../../hocs/withClassNames';
 import styles from './CardFooter.module.css';
 
-const classNames: ICardFooterClassNames = {
+export default withClassNames<ICardFooterProps, ICardFooterClassNames>(CardFooter, {
     container: styles.container
-};
-
-const FrontonCardFooter: FC<ICardFooterProps> = props => <CardFooter classNames={classNames} {...props} />;
-
-export default FrontonCardFooter;
+});
