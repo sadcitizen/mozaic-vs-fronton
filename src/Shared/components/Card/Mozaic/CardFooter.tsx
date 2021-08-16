@@ -1,10 +1,6 @@
-import React, { FC } from 'react';
 import CardFooter, { ICardFooterClassNames, ICardFooterProps } from '../CardFooter';
+import withClassNames from '../../../hocs/withClassNames';
 
-const classNames: ICardFooterClassNames = {
+export default withClassNames<ICardFooterProps, ICardFooterClassNames>(CardFooter, {
     container: 'mc-card__footer'
-};
-
-const MozaicCardFooter: FC<ICardFooterProps> = props => <CardFooter classNames={classNames} {...props} />;
-
-export default MozaicCardFooter;
+});

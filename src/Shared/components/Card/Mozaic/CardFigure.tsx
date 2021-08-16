@@ -1,11 +1,7 @@
-import React, { FC } from 'react';
-import CardFigure, { ICardFigureClassNames, ICardFigureProps } from '../CardFigure';
+import CardFigure, { ICardFigureClassNames, ICardFigureProps } from '../CardFigure'
+import withClassNames from '../../../hocs/withClassNames';
 
-const classNames: ICardFigureClassNames = {
+export default withClassNames<ICardFigureProps, ICardFigureClassNames>(CardFigure, {
     container: 'mc-card__visual',
     image: 'mc-card__img'
-};
-
-const MozaicCardFigure: FC<ICardFigureProps> = props => <CardFigure classNames={classNames} {...props} />;
-
-export default MozaicCardFigure;
+});

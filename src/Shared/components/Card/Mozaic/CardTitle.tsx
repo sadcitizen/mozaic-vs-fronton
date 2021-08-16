@@ -1,10 +1,6 @@
-import React, { FC } from 'react';
 import CardTitle, { ICardTitleClassNames, ICardTitleProps } from '../CardTitle';
+import withClassNames from '../../../hocs/withClassNames';
 
-const classNames: ICardTitleClassNames = {
+export default withClassNames<ICardTitleProps, ICardTitleClassNames>(CardTitle, {
     title: 'mc-card__title'
-};
-
-const MozaicCardTitle: FC<ICardTitleProps> = props => <CardTitle classNames={classNames} {...props} />;
-
-export default MozaicCardTitle;
+});
