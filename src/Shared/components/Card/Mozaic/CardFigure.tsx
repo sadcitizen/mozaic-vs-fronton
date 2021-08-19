@@ -2,6 +2,6 @@ import CardFigure, { ICardFigureClassNames, ICardFigureProps } from '../CardFigu
 import withClassNames from '../../../hocs/withClassNames';
 
 export default withClassNames<ICardFigureProps, ICardFigureClassNames>(CardFigure, {
-    container: 'mc-card__visual',
+    figure: 'mc-card__visual',
     image: 'mc-card__img'
 });

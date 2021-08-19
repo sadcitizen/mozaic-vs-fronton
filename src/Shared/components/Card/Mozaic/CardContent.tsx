@@ -2,5 +2,5 @@ import CardContent, { ICardContentClassNames, ICardContentProps } from '../CardC
 import withClassNames from '../../../hocs/withClassNames';
 
 export default withClassNames<ICardContentProps, ICardContentClassNames>(CardContent, {
-    container: 'mc-card__content'
+    content: 'mc-card__content'
 });

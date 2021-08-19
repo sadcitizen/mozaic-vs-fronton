@@ -1,8 +1,8 @@
 import CardFigure, { ICardFigureClassNames, ICardFigureProps } from '../CardFigure';
 import withClassNames from '../../../hocs/withClassNames';
-import styles from './CardFigure.module.css';
+import styles from './Card.module.css';
 
 export default withClassNames<ICardFigureProps, ICardFigureClassNames>(CardFigure, {
-    container: styles.container,
+    figure: styles.visual,
     image: styles.image
 });

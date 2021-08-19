@@ -2,5 +2,5 @@ import CardFooter, { ICardFooterClassNames, ICardFooterProps } from '../CardFoot
 import withClassNames from '../../../hocs/withClassNames';
 
 export default withClassNames<ICardFooterProps, ICardFooterClassNames>(CardFooter, {
-    container: 'mc-card__footer'
+    footer: 'mc-card__footer'
 });

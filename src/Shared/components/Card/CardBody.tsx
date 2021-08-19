@@ -1,16 +1,19 @@
 import React, { FC } from 'react';
+import cn from 'classnames';
 import { IClassNames } from '../../domain/ClassNames';
 
 export interface ICardBodyClassNames {
-    container: string;
+    body: string;
 }
 
-export interface ICardBodyProps {}
+export interface ICardBodyProps {
+    className?: string
+}
 
 interface IProps extends ICardBodyProps, IClassNames<ICardBodyClassNames> {}
 
-const CardBody: FC<IProps> = ({ classNames, children }) => (
-    <div className={classNames.container}>
+const CardBody: FC<IProps> = ({ classNames, className, children }) => (
+    <div className={cn(classNames.body, className)}>
         { children }
     </div>
 );
