@@ -3,12 +3,17 @@ import { Story } from '@storybook/react';
 import FrontonEnv from '../components/FrontonEnv';
 import {
     RadioContainer,
+    RadioIndicatorOff,
+    RadioIndicatorOn,
+    RadioLabel
 } from '../components/Radio/Fronton';
 
 const Template: Story = () => (
     <FrontonEnv>
         <RadioContainer>
-            111
+            <RadioIndicatorOff>[&nbsp;]</RadioIndicatorOff>
+            <RadioIndicatorOn>[*]</RadioIndicatorOn>
+            <RadioLabel>Radio</RadioLabel>
         </RadioContainer>
     </FrontonEnv>
 );

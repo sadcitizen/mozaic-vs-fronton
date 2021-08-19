@@ -3,12 +3,17 @@ import { Story } from '@storybook/react';
 import MozaicEnv from '../components/MozaicEnv';
 import {
     RadioContainer,
+    RadioIndicatorOff,
+    RadioIndicatorOn,
+    RadioLabel
 } from '../components/Radio/Mozaic';
 
 const Template: Story = () => (
     <MozaicEnv>
         <RadioContainer>
-            11
+            <RadioIndicatorOff>[&nbsp;]</RadioIndicatorOff>
+            <RadioIndicatorOn>[*]</RadioIndicatorOn>
+            <RadioLabel>Radio</RadioLabel>
         </RadioContainer>
     </MozaicEnv>
 );
