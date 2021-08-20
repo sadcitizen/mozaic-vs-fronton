@@ -16,12 +16,12 @@ export function useRadioContext(): IRadioContextProps {
     return context;
 }
 
-interface IRadioContextProviderProps {}
+interface IRadioContextProviderProps {
+    isChecked: boolean;
+}
 
-export const RadioContextProvider: FC<IRadioContextProviderProps> = ({ children }) => {
-    const contextValue = {
-        isChecked: true
-    };
+export const RadioContextProvider: FC<IRadioContextProviderProps> = ({ children, isChecked }) => {
+    const contextValue = { isChecked };
 
     return <RadioContext.Provider value={contextValue}>{children}</RadioContext.Provider>;
 };

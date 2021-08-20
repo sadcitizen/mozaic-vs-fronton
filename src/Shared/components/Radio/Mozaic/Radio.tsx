@@ -1,21 +1,25 @@
-import React, { FC } from 'react';
+import React, { ChangeEvent, FC } from 'react';
+import { IRadioContainerProps } from '../RadioContainer';
 import RadioContainer from './RadioContainer';
 import RadioIndicatorOff from './RadioIndicatorOff';
 import RadioIndicatorOn from './RadioIndicatorOn';
 import RadioLabel from './RadioLabel';
 import './Radio.css';
 
-export interface IRadioProps {
-    className?: string;
-    isChecked?: boolean;
-    isDisabled?: boolean;
+export interface IRadioProps extends IRadioContainerProps {
     isInvalid?: boolean;
-    onChange?: () => void
 }
 
-const Radio: FC<IRadioProps> = ({ className, children, isChecked, isDisabled, isInvalid, onChange }) => {
+const Radio: FC<IRadioProps> = ({ className, children, name, value, isChecked, isDisabled, isInvalid, onChange }) => {
     return (
-        <RadioContainer className={className} isChecked={isChecked} isDisabled={isDisabled} onChange={onChange}>
+        <RadioContainer
+            className={className}
+            name={name}
+            value={value}
+            isChecked={isChecked}
+            isDisabled={isDisabled}
+            onChange={onChange}
+        >
             <RadioIndicatorOff>[&nbsp;]</RadioIndicatorOff>
             <RadioIndicatorOn>[*]</RadioIndicatorOn>
             <RadioLabel>{children}</RadioLabel>

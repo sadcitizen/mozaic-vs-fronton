@@ -5,7 +5,7 @@ import { Radio as RadioComponent } from '../components/Radio/Mozaic';
 
 const Template: Story = () => (
     <MozaicEnv>
-        <RadioComponent>Radio</RadioComponent>
+        <RadioComponent value="radio">Radio</RadioComponent>
     </MozaicEnv>
 );
 

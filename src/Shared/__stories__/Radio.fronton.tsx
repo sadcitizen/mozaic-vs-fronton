@@ -5,7 +5,7 @@ import { Radio as RadioComponent } from '../components/Radio/Fronton';
 
 const Template: Story = () => (
     <FrontonEnv>
-        <RadioComponent size="m">Radio</RadioComponent>
+        <RadioComponent size="m" value="radio">Radio</RadioComponent>
     </FrontonEnv>
 );
 

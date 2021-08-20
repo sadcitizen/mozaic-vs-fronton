@@ -1,25 +1,48 @@
-import React, { FC } from 'react';
+import React, { ChangeEvent, FC } from 'react';
 import cn from 'classnames';
 import { IClassNames } from '../../domain/ClassNames';
 import { RadioContextProvider } from './RadioContext';
+import styles from './RadioContainer.module.css';
 
 export interface IRadioContainerClassNames {
     container: string;
 }
 
 export interface IRadioContainerProps {
-    className?: string,
+    className?: string;
+    name?: string;
+    value: string;
     isChecked?: boolean;
     isDisabled?: boolean;
-    onChange?: () => void
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 interface IProps extends IRadioContainerProps, IClassNames<IRadioContainerClassNames> {}
 
-const RadioContainer: FC<IProps> = ({ classNames, className, children, isChecked, isDisabled, onChange }) => {
+const RadioContainer: FC<IProps> = ({
+    classNames,
+    className,
+    children,
+    name,
+    value,
+    isChecked = false,
+    isDisabled = false,
+    onChange
+}) => {
     return (
-        <RadioContextProvider>
-            <div className={cn(classNames.container, className)}>{children}</div>
+        <RadioContextProvider isChecked={isChecked}>
+            <div className={cn(styles.container, classNames.container, className)}>
+                <input
+                    className={styles.input}
+                    type="radio"
+                    name={name}
+                    value={value}
+                    checked={isChecked}
+                    disabled={isDisabled}
+                    onChange={onChange}
+                />
+                {children}
+            </div>
         </RadioContextProvider>
     );
 };
