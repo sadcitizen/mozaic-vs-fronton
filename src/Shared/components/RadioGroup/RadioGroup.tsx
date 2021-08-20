@@ -1,4 +1,4 @@
-import React, { FC, createContext, useContext } from 'react';
+import React, { FC, createContext, useContext, ChangeEvent } from 'react';
 
 interface IRadioGroupContextProps {}
 
@@ -14,9 +14,12 @@ export function useRadioGroup(): IRadioGroupContextProps {
     return context;
 }
 
-interface IRadioGroupProps {}
+interface IRadioGroupProps {
+    value: string;
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+}
 
-export const RadioGroup: FC<IRadioGroupProps> = ({ children }) => {
+export const RadioGroup: FC<IRadioGroupProps> = ({ children, value, onChange }) => {
     const contextValue = {};
 
     return <RadioGroupContext.Provider value={contextValue}>{children}</RadioGroupContext.Provider>;

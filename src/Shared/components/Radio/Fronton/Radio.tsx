@@ -8,14 +8,14 @@ import RadioLabel from './RadioLabel';
 import styles from './Radio.module.css';
 
 export interface IRadioProps extends IRadioContainerProps {
-    size: 'm' | 'l';
+    size?: 'm' | 'l';
     isInvalid?: boolean;
 }
 
 const Radio: FC<IRadioProps> = ({
     className,
     children,
-    size,
+    size = 'm',
     name,
     value,
     isChecked,

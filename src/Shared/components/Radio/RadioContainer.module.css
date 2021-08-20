@@ -1,10 +1,10 @@
 .container {
     position: relative;
-     overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .input {
     position: absolute;
-    top: -100rem;
-    left: -100rem;
+    top: -1rem;
+    left: -1rem;
 }
