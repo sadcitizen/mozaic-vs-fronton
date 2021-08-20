@@ -15,7 +15,7 @@ export interface IRadioProps {
 
 const Radio: FC<IRadioProps> = ({ className, children, isChecked, isDisabled, isInvalid, onChange }) => {
     return (
-        <RadioContainer className={className}>
+        <RadioContainer className={className} isChecked={isChecked} isDisabled={isDisabled} onChange={onChange}>
             <RadioIndicatorOff>[&nbsp;]</RadioIndicatorOff>
             <RadioIndicatorOn>[*]</RadioIndicatorOn>
             <RadioLabel>{children}</RadioLabel>

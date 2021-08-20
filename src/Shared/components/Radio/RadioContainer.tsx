@@ -8,12 +8,15 @@ export interface IRadioContainerClassNames {
 }
 
 export interface IRadioContainerProps {
-    className?: string
+    className?: string,
+    isChecked?: boolean;
+    isDisabled?: boolean;
+    onChange?: () => void
 }
 
 interface IProps extends IRadioContainerProps, IClassNames<IRadioContainerClassNames> {}
 
-const RadioContainer: FC<IProps> = ({ classNames, className, children }) => {
+const RadioContainer: FC<IProps> = ({ classNames, className, children, isChecked, isDisabled, onChange }) => {
     return (
         <RadioContextProvider>
             <div className={cn(classNames.container, className)}>{children}</div>
