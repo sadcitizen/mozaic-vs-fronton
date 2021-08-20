@@ -7,14 +7,12 @@ import languages from '../__fixtures__/languages';
 
 const Template: Story = () => (
     <FrontonEnv>
-        <RadioGroup value="go">
-            <RadioGroup value={languages[0].name}>
-                {languages.map(lang => (
-                    <RadioComponent key={lang.name} value={lang.name}>
-                        {lang.label}
-                    </RadioComponent>
-                ))}
-            </RadioGroup>
+        <RadioGroup value={languages[0].name}>
+            {languages.map(lang => (
+                <RadioComponent key={lang.name} value={lang.name}>
+                    {lang.label}
+                </RadioComponent>
+            ))}
         </RadioGroup>
     </FrontonEnv>
 );
