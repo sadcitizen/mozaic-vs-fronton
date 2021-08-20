@@ -1,5 +1,5 @@
 .container {
-
+    display: flex;
 }
 
 .indicator {
@@ -16,5 +16,5 @@
 }
 
 .l {
-    
+
 }
