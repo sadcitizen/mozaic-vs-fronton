@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
+import cn from 'classnames';
 import RadioContainer from './RadioContainer';
 import RadioIndicatorOff from './RadioIndicatorOff';
 import RadioIndicatorOn from './RadioIndicatorOn';
 import RadioLabel from './RadioLabel';
+import styles from './Radio.module.css';
 
 export interface IRadioProps {
     className?: string;

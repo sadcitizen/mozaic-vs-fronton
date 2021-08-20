@@ -3,6 +3,7 @@ import RadioContainer from './RadioContainer';
 import RadioIndicatorOff from './RadioIndicatorOff';
 import RadioIndicatorOn from './RadioIndicatorOn';
 import RadioLabel from './RadioLabel';
+import './Radio.css';
 
 export interface IRadioProps {
     className?: string;
