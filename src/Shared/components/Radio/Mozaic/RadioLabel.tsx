@@ -2,5 +2,5 @@ import RadioLabel, { IRadioLabelProps, IRadioLabelClassNames } from '../RadioLab
 import withClassNames from '../../../hocs/withClassNames';
 
 export default withClassNames<IRadioLabelProps, IRadioLabelClassNames>(RadioLabel, {
-    label: ''
+    label: 'mc-radio__label'
 });

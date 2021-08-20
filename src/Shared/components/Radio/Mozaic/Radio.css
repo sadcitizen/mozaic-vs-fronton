@@ -1,3 +1,7 @@
 .mc-radio {
     display: flex;
 }
+
+.mc-radio__label {
+    margin-left: 0.5rem;
+}
