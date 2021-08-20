@@ -1,11 +1,14 @@
 import React from 'react';
 import { Story } from '@storybook/react';
 import MozaicEnv from '../components/MozaicEnv';
+import RadioGroup from '../components/RadioGroup';
 import { Radio as RadioComponent } from '../components/Radio/Mozaic';
 
 const Template: Story = () => (
     <MozaicEnv>
-        <RadioComponent value="radio">Radio</RadioComponent>
+        <RadioGroup>
+            <RadioComponent value="radio">Radio</RadioComponent>
+        </RadioGroup>
     </MozaicEnv>
 );
 

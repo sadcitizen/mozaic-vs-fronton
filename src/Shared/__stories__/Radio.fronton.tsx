@@ -1,11 +1,14 @@
 import React from 'react';
 import { Story } from '@storybook/react';
 import FrontonEnv from '../components/FrontonEnv';
+import RadioGroup from '../components/RadioGroup';
 import { Radio as RadioComponent } from '../components/Radio/Fronton';
 
 const Template: Story = () => (
     <FrontonEnv>
-        <RadioComponent size="m" value="radio">Radio</RadioComponent>
+        <RadioGroup>
+            <RadioComponent size="m" value="radio">Radio</RadioComponent>
+        </RadioGroup>
     </FrontonEnv>
 );
 
