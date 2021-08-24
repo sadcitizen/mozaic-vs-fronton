@@ -2,5 +2,6 @@ import RadioContainer, { IRadioContainerClassNames, IRadioContainerProps } from 
 import withClassNames from '../../../hocs/withClassNames';
 
 export default withClassNames<IRadioContainerProps, IRadioContainerClassNames>(RadioContainer, {
-    container: 'mc-radio'
+    container: 'mc-radio',
+    input: 'mc-radio__input'
 });

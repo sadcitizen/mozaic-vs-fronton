@@ -2,10 +2,10 @@ import React, { ChangeEvent, FC } from 'react';
 import cn from 'classnames';
 import { IClassNames } from '../../domain/ClassNames';
 import { RadioContextProvider } from './RadioContext';
-import styles from './RadioContainer.module.css';
 
 export interface IRadioContainerClassNames {
     container: string;
+    input: string;
 }
 
 export interface IRadioContainerProps {
@@ -31,9 +31,9 @@ const RadioContainer: FC<IProps> = ({
 }) => {
     return (
         <RadioContextProvider isChecked={isChecked}>
-            <div className={cn(styles.container, classNames.container, className)}>
+            <div className={cn(classNames.container, className)}>
                 <input
-                    className={styles.input}
+                    className={classNames.input}
                     type="radio"
                     name={name}
                     value={value}
