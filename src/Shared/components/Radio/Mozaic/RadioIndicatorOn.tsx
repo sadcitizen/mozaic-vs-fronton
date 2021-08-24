@@ -2,5 +2,5 @@ import RadioIndicatorOn, { IRadioIndicatorOnProps, IRadioIndicatorOnClassNames }
 import withClassNames from '../../../hocs/withClassNames';
 
 export default withClassNames<IRadioIndicatorOnProps, IRadioIndicatorOnClassNames>(RadioIndicatorOn, {
-    indicator: ''
+    indicator: 'mc-radio__indicator'
 });

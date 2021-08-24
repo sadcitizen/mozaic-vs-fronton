@@ -1,17 +1,55 @@
 .container {
     display: flex;
+    position: relative;
+    align-items: center;
 }
 
-.input {
-
-}
-
-.indicator {
-
+.container + .container {
+    margin-top: 16px;
 }
 
 .label {
     margin-left: 8px;
+}
+
+.input {
+    position: absolute;
+    top: -16px;
+    left: -16px;
+}
+
+.indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ced0d6;
+}
+
+.isChecked {
+    position: relative;
+    background-color: #464c5c;
+    border-color: #464c5c;
+}
+
+.isChecked::after {
+    content: "";
+    background: #ffffff;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.isDisabled {
+
+}
+
+.isInvalid {
+
 }
 
 /* Sizes */

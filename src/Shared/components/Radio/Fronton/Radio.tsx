@@ -32,8 +32,8 @@ const Radio: FC<IRadioProps> = ({
             isDisabled={isDisabled}
             onChange={onChange}
         >
-            <RadioIndicatorOff>[&nbsp;]</RadioIndicatorOff>
-            <RadioIndicatorOn>[*]</RadioIndicatorOn>
+            <RadioIndicatorOff className={cn(isInvalid && styles.isInvalid, isDisabled && styles.isDisabled)} />
+            <RadioIndicatorOn className={cn(styles.isChecked, isInvalid && styles.isInvalid, isDisabled && styles.isDisabled)} />
             <RadioLabel>{children}</RadioLabel>
         </RadioContainer>
     );

@@ -1,4 +1,5 @@
-import React, { ChangeEvent, FC } from 'react';
+import React, { FC } from 'react';
+import cn from 'classnames';
 import { IRadioContainerProps } from '../RadioContainer';
 import RadioContainer from './RadioContainer';
 import RadioIndicatorOff from './RadioIndicatorOff';
@@ -20,8 +21,8 @@ const Radio: FC<IRadioProps> = ({ className, children, name, value, isChecked, i
             isDisabled={isDisabled}
             onChange={onChange}
         >
-            <RadioIndicatorOff>[&nbsp;]</RadioIndicatorOff>
-            <RadioIndicatorOn>[*]</RadioIndicatorOn>
+            <RadioIndicatorOff className={cn(isInvalid && 'is-invalid', isDisabled && 'is-disabled')} />
+            <RadioIndicatorOn className={cn('is-checked', isInvalid && 'is-invalid', isDisabled && 'is-disabled')} />
             <RadioLabel>{children}</RadioLabel>
         </RadioContainer>
     );
